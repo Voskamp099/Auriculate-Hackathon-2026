@@ -1,53 +1,132 @@
-# Auriculate — Merged Build
+<a id="readme-top"></a>
 
-All logic is now inside `index.html` (one self-contained file). `main.js` is no
-longer used; `main_legacy.js` is kept here only as a reference to the previous
-standalone Phase 8 implementation.
+<div align="center">
+  <img src="logo.png" width="80"/>
 
-## How to run
+  <h2>Auriculate</h2>
 
-From this folder, in a terminal:
+  <p>
+    Conduct a soundscape with your hands.
+    <br/>
+    Gesture-driven · Real-time · Performative
+  </p>
 
-```
+<a href="https://voskamp099.github.io/Auriculate-Hackathon-2026/"><strong>Live Demo</strong></a>
+
+</div>
+
+## Table of Contents
+
+- [About the Project](#about-the-project)
+  - [Built with](#built-with)
+- [Quick Start](#quick-start)
+- [User Guide](#user-guide)
+- [Sound Library](#sound-library)
+- [Motivation](#motivation)
+- [Contact](#contact)
+
+## About the Project
+
+**Auriculate** is a browser-based system where you:
+
+- Use **hand gestures** to control sound
+- Generate a **live soundscape in real time**
+- Perform — not edit — your audio
+
+No timeline. No post-production. Just presence.
+
+## Built with
+
+- MediaPipe Hands (hand tracking)
+- Web Audio API
+- Three.js (particle background)
+- Vanilla JS, no framework
+
+Latency target: **under 100 ms**
+
+## Quick Start
+
+The whole application is a single self-contained `index.html`. Serve the folder
+over HTTP — ES modules and the camera both require it — and open the printed URL:
+
+```bash
 npx serve
 ```
 
-Then open the URL it prints (usually `http://localhost:3000`) in Chrome.
+Then open `http://localhost:3000` in a browser that allows camera access.
 
-## What's in this build
+## User Guide
 
-- Friend's design preserved: intro screen, loader, 3D particle background,
-  tutorial overlay, scene switcher (forest / rain / fire), DM Mono / DM Serif
-  typography, glassy panel layout.
-- Phase 8 logic preserved: two-handed control, debounced gesture detection,
-  Ambience / SFX layer system, both-thumbs-up/down to switch layers,
-  press-to-trigger SFX (no rapid retrigger), volume lock when right hand
-  leaves frame in Ambience layer, head-height volume mapping.
+- Left hand controls **volume**, mapped by height, maximum at head height
+- Right hand **triggers** sounds
 
-## Layer system
+### Ambience layer (default, looping)
 
-- **Ambience layer (default):** index→wind, peace→rain, three→thunder,
-  pinky→birds, fist→silence
-- **SFX layer:** OK→dog, index→guzhen, peace→footsteps, three→door knock,
-  fist→silence
-- **Both hands 👍👍**: Ambience → SFX
-- **Both hands 👎👎**: SFX → Ambience
+| Gesture | Sound group |
+| ------- | ----------- |
+| Index   | Wind        |
+| Peace   | Rain        |
+| Three   | Thunder     |
+| Pinky   | Birds       |
+| Fist    | Silence     |
 
-## Volume
+### SFX layer (one-shot)
 
-- Left hand height controls volume. Raise to head height for max.
-- In Ambience layer: drop the right hand while a sound is playing → volume
-  bar turns red and freezes. The sound keeps playing hands-free. Show the
-  same gesture again to unlock.
-- In SFX layer: left hand controls the most recently triggered SFX's volume.
-  No lock in this layer.
+| Gesture | Sound     |
+| ------- | --------- |
+| OK      | Dog bark  |
+| Index   | Guzheng   |
+| Peace   | Footsteps |
+| Three   | Door knock |
+| Fist    | Silence   |
 
-## Mirror
+### Switching layers
 
-Press `M` on the keyboard to flip the camera horizontally.
+- Both hands thumbs up moves to SFX
+- Both hands thumbs down returns to Ambience
+
+### Behaviour notes
+
+- Gesture detection is debounced, so a held pose does not retrigger a sound.
+- In the **Ambience** layer, taking the right hand out of frame while a sound is
+  playing turns the volume bar red and freezes it. The sound keeps playing
+  hands-free; repeat the gesture to unlock.
+- In the **SFX** layer there is no lock — the left hand controls the volume of
+  the most recently triggered effect.
+- In the **SFX** layer, taking the right hand out of frame leaves the ambience
+  bed running underneath.
+- Press `M` to mirror the camera horizontally.
+
+## Sound Library
+
+52 audio assets, grouped by role:
+
+- `Audio Database/Ambience/` — City, Music, Percussion, Rain, Storm, Thunder, Wind
+- `Audio Database/Sound Effect/` — one-shot effects
 
 ## Files
 
-- `index.html` — the entire app (HTML + CSS + JS, single file)
-- `main_legacy.js` — old standalone Phase 8 logic, kept as reference only
-- `*.mp3` — audio assets
+| File | Role |
+| ---- | ---- |
+| `index.html` | The entire application — HTML, CSS and JS in one file |
+| `gesture_engine.js` | Earlier standalone Phase 8 implementation, kept for reference; not loaded |
+| `logo.png`, `logo-transparent.png`, `logo-white.png` | Brand marks |
+| `Audio Database/` | Sound assets |
+
+## Motivation
+
+AI makes content cheap — but removes the human moment.
+
+Auriculate does the opposite:
+
+> It keeps performance live, embodied, and unrepeatable.
+
+Inspired by *kouji* — an ancient Chinese art of creating entire worlds using only the human voice.
+
+## Contact
+
+Auriculate Team — [Voskamp099](https://github.com/Voskamp099)
+
+---
+
+*Built during a 2026 hackathon.*
