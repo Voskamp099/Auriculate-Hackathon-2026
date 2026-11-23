@@ -101,8 +101,8 @@ Then open `http://localhost:3000` in a browser that allows camera access.
 
 52 audio assets, grouped by role:
 
-- `Audio Database/Ambience/` — City, Music, Percussion, Rain, Storm, Thunder, Wind
-- `Audio Database/Sound Effect/` — one-shot effects
+- `audio/ambience/` — City, Music, Percussion, Rain, Storm, Thunder, Wind
+- `audio/sfx/` — one-shot effects
 
 ## Files
 
@@ -111,8 +111,8 @@ Then open `http://localhost:3000` in a browser that allows camera access.
 | `index.html` | The entire application — HTML, CSS and JS in one file |
 | `legacy/gesture_engine.js` | Earlier standalone Phase 8 implementation, kept for reference; not loaded |
 | `assets/logo.png`, `assets/logo-transparent.png`, `assets/logo-white.png` | Brand marks |
-| `Audio Database/` | Sound assets |
-| `assets/` | Brand marks |
+| `audio/` | Sound assets (ambience/ + sfx/) |
+| `archive/` | Original source archives |
 
 ## Motivation
 

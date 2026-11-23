@@ -1001,66 +1001,66 @@ const STABLE_FRAMES = 3;
 let customGestureMap = {}; // ambience layer custom mappings
 let customSFXMap = {};      // sfx layer custom mappings
 
-// 声音库 —— 使用 Audio Database 文件夹内的真实音效
-// 确保解压后的 "Audio Database" 文件夹与 index.html 在同一目录
+// 声音库 —— 使用 audio 文件夹内的真实音效
+// 确保解压后的 "audio" 文件夹与 index.html 在同一目录
 const SOUND_LIBRARY = [
   // Wind
-  { id:"wind_soft",     category:"wind",    layer:"ambience", label:"Soft Wind",        url:"Audio Database/Ambience/Wind/softwind.mp3" },
-  { id:"wind_main",     category:"wind",    layer:"ambience", label:"Wind",             url:"Audio Database/Ambience/Wind/wind.mp3" },
-  { id:"wind_strange",  category:"wind",    layer:"ambience", label:"Strange Wind",     url:"Audio Database/Ambience/Wind/strangewind.mp3" },
-  { id:"wind_chimes",   category:"wind",    layer:"ambience", label:"Wind Chimes",      url:"Audio Database/Ambience/Wind/windchimes.mp3" },
-  { id:"wind_forest",   category:"wind",    layer:"ambience", label:"Forest Wind",      url:"Audio Database/Ambience/Wind/forestwind.mp3" },
+  { id:"wind_soft",     category:"wind",    layer:"ambience", label:"Soft Wind",        url:"audio/ambience/Wind/softwind.mp3" },
+  { id:"wind_main",     category:"wind",    layer:"ambience", label:"Wind",             url:"audio/ambience/Wind/wind.mp3" },
+  { id:"wind_strange",  category:"wind",    layer:"ambience", label:"Strange Wind",     url:"audio/ambience/Wind/strangewind.mp3" },
+  { id:"wind_chimes",   category:"wind",    layer:"ambience", label:"Wind Chimes",      url:"audio/ambience/Wind/windchimes.mp3" },
+  { id:"wind_forest",   category:"wind",    layer:"ambience", label:"Forest Wind",      url:"audio/ambience/Wind/forestwind.mp3" },
   // Rain
-  { id:"rain_1",        category:"rain",    layer:"ambience", label:"Rain",             url:"Audio Database/Ambience/Rain/rain.mp3" },
-  { id:"rain_2",        category:"rain",    layer:"ambience", label:"Rain 2",           url:"Audio Database/Ambience/Rain/rain 2.mp3" },
-  { id:"rain_3",        category:"rain",    layer:"ambience", label:"Rain 3",           url:"Audio Database/Ambience/Rain/rain 3.mp3" },
+  { id:"rain_1",        category:"rain",    layer:"ambience", label:"Rain",             url:"audio/ambience/Rain/rain.mp3" },
+  { id:"rain_2",        category:"rain",    layer:"ambience", label:"Rain 2",           url:"audio/ambience/Rain/rain 2.mp3" },
+  { id:"rain_3",        category:"rain",    layer:"ambience", label:"Rain 3",           url:"audio/ambience/Rain/rain 3.mp3" },
   // Thunder
-  { id:"thunder_1",     category:"thunder", layer:"ambience", label:"Thunderstorm",     url:"Audio Database/Ambience/Thunder/thunderstorm.mp3" },
-  { id:"thunder_2",     category:"thunder", layer:"ambience", label:"Thunderstorm 2",   url:"Audio Database/Ambience/Thunder/thunderstorm 2.mp3" },
-  { id:"thunder_3",     category:"thunder", layer:"ambience", label:"Thunderstorm 3",   url:"Audio Database/Ambience/Thunder/thunderstorm 3.mp3" },
+  { id:"thunder_1",     category:"thunder", layer:"ambience", label:"Thunderstorm",     url:"audio/ambience/Thunder/thunderstorm.mp3" },
+  { id:"thunder_2",     category:"thunder", layer:"ambience", label:"Thunderstorm 2",   url:"audio/ambience/Thunder/thunderstorm 2.mp3" },
+  { id:"thunder_3",     category:"thunder", layer:"ambience", label:"Thunderstorm 3",   url:"audio/ambience/Thunder/thunderstorm 3.mp3" },
   // Storm
-  { id:"storm_1",       category:"storm",   layer:"ambience", label:"Storm 1",          url:"Audio Database/Ambience/Storm/Storm 1.mp3" },
-  { id:"storm_2",       category:"storm",   layer:"ambience", label:"Storm 2",          url:"Audio Database/Ambience/Storm/Storm 2.mp3" },
-  { id:"storm_3",       category:"storm",   layer:"ambience", label:"Storm 3",          url:"Audio Database/Ambience/Storm/Storm 3.mp3" },
+  { id:"storm_1",       category:"storm",   layer:"ambience", label:"Storm 1",          url:"audio/ambience/Storm/Storm 1.mp3" },
+  { id:"storm_2",       category:"storm",   layer:"ambience", label:"Storm 2",          url:"audio/ambience/Storm/Storm 2.mp3" },
+  { id:"storm_3",       category:"storm",   layer:"ambience", label:"Storm 3",          url:"audio/ambience/Storm/Storm 3.mp3" },
   // City
-  { id:"city_1",        category:"city",    layer:"ambience", label:"City 1",           url:"Audio Database/Ambience/City/City 1.mp3" },
-  { id:"city_2",        category:"city",    layer:"ambience", label:"City 2",           url:"Audio Database/Ambience/City/City 2.mp3" },
-  { id:"city_3",        category:"city",    layer:"ambience", label:"City 3",           url:"Audio Database/Ambience/City/City 3.mp3" },
-  { id:"city_4",        category:"city",    layer:"ambience", label:"City 4",           url:"Audio Database/Ambience/City/City 4.mp3" },
-  { id:"city_train",    category:"city",    layer:"ambience", label:"Train Ride",       url:"Audio Database/Ambience/City/trainride.mp3" },
+  { id:"city_1",        category:"city",    layer:"ambience", label:"City 1",           url:"audio/ambience/City/City 1.mp3" },
+  { id:"city_2",        category:"city",    layer:"ambience", label:"City 2",           url:"audio/ambience/City/City 2.mp3" },
+  { id:"city_3",        category:"city",    layer:"ambience", label:"City 3",           url:"audio/ambience/City/City 3.mp3" },
+  { id:"city_4",        category:"city",    layer:"ambience", label:"City 4",           url:"audio/ambience/City/City 4.mp3" },
+  { id:"city_train",    category:"city",    layer:"ambience", label:"Train Ride",       url:"audio/ambience/City/trainride.mp3" },
   // Music
-  { id:"guitar_1",      category:"music",   layer:"ambience", label:"Guitar 1",         url:"Audio Database/Ambience/Music/Guitar 1.mp3" },
-  { id:"guitar_2",      category:"music",   layer:"ambience", label:"Guitar 2",         url:"Audio Database/Ambience/Music/Guitar 2.mp3" },
-  { id:"guitar_3",      category:"music",   layer:"ambience", label:"Guitar 3",         url:"Audio Database/Ambience/Music/Guitar 3.mp3" },
-  { id:"guitar_4",      category:"music",   layer:"ambience", label:"Guitar 4",         url:"Audio Database/Ambience/Music/Guitar 4.mp3" },
-  { id:"guitar_5",      category:"music",   layer:"ambience", label:"Guitar 5",         url:"Audio Database/Ambience/Music/Guitar 5.mp3" },
-  { id:"piano_1",       category:"music",   layer:"ambience", label:"Piano 1",          url:"Audio Database/Ambience/Music/Piano 1.mp3" },
-  { id:"piano_2",       category:"music",   layer:"ambience", label:"Piano 2",          url:"Audio Database/Ambience/Music/Piano 2.mp3" },
-  { id:"perc_1",        category:"music",   layer:"ambience", label:"Percussion 1",     url:"Audio Database/Ambience/Music/Precussion 1.mp3" },
-  { id:"perc_2",        category:"music",   layer:"ambience", label:"Percussion 2",     url:"Audio Database/Ambience/Music/Precussion 2.mp3" },
-  { id:"perc_3",        category:"music",   layer:"ambience", label:"Percussion 3",     url:"Audio Database/Ambience/Music/Precussion 3.mp3" },
-  { id:"perc_4",        category:"music",   layer:"ambience", label:"Percussion 4",     url:"Audio Database/Ambience/Music/Precussion 4.mp3" },
+  { id:"guitar_1",      category:"music",   layer:"ambience", label:"Guitar 1",         url:"audio/ambience/Music/Guitar 1.mp3" },
+  { id:"guitar_2",      category:"music",   layer:"ambience", label:"Guitar 2",         url:"audio/ambience/Music/Guitar 2.mp3" },
+  { id:"guitar_3",      category:"music",   layer:"ambience", label:"Guitar 3",         url:"audio/ambience/Music/Guitar 3.mp3" },
+  { id:"guitar_4",      category:"music",   layer:"ambience", label:"Guitar 4",         url:"audio/ambience/Music/Guitar 4.mp3" },
+  { id:"guitar_5",      category:"music",   layer:"ambience", label:"Guitar 5",         url:"audio/ambience/Music/Guitar 5.mp3" },
+  { id:"piano_1",       category:"music",   layer:"ambience", label:"Piano 1",          url:"audio/ambience/Music/Piano 1.mp3" },
+  { id:"piano_2",       category:"music",   layer:"ambience", label:"Piano 2",          url:"audio/ambience/Music/Piano 2.mp3" },
+  { id:"perc_1",        category:"music",   layer:"ambience", label:"Percussion 1",     url:"audio/ambience/Music/Precussion 1.mp3" },
+  { id:"perc_2",        category:"music",   layer:"ambience", label:"Percussion 2",     url:"audio/ambience/Music/Precussion 2.mp3" },
+  { id:"perc_3",        category:"music",   layer:"ambience", label:"Percussion 3",     url:"audio/ambience/Music/Precussion 3.mp3" },
+  { id:"perc_4",        category:"music",   layer:"ambience", label:"Percussion 4",     url:"audio/ambience/Music/Precussion 4.mp3" },
   // Sound Effects
-  { id:"sfx_dog",       category:"sfx",     layer:"sfx",      label:"Dog Barks",        url:"Audio Database/Sound Effect/dogbarks.mp3" },
-  { id:"sfx_church",    category:"sfx",     layer:"sfx",      label:"Church Bell",      url:"Audio Database/Sound Effect/churchbell.mp3" },
-  { id:"sfx_lion",      category:"sfx",     layer:"sfx",      label:"Lion Roar",        url:"Audio Database/Sound Effect/lionroar.mp3" },
-  { id:"sfx_crash",     category:"sfx",     layer:"sfx",      label:"Car Crash",        url:"Audio Database/Sound Effect/carcrash.mp3" },
-  { id:"sfx_sword",     category:"sfx",     layer:"sfx",      label:"Sword Fight",      url:"Audio Database/Sound Effect/swordfight.mp3" },
-  { id:"sfx_tree",      category:"sfx",     layer:"sfx",      label:"Falling Tree",     url:"Audio Database/Sound Effect/fallingtree.mp3" },
-  { id:"sfx_alarm",     category:"sfx",     layer:"sfx",      label:"Alarm",            url:"Audio Database/Sound Effect/alarm.mp3" },
-  { id:"sfx_explosion", category:"sfx",     layer:"sfx",      label:"Explosion",        url:"Audio Database/Sound Effect/cinematicexplosion.mp3" },
-  { id:"sfx_whoosh",    category:"sfx",     layer:"sfx",      label:"Cinematic Whoosh", url:"Audio Database/Sound Effect/whooshcinematic.mp3" },
-  { id:"sfx_riser",     category:"sfx",     layer:"sfx",      label:"Cinematic Riser",  url:"Audio Database/Sound Effect/cinematicriser.mp3" },
-  { id:"sfx_cloth",     category:"sfx",     layer:"sfx",      label:"Cloth Rustle",     url:"Audio Database/Sound Effect/clothrustle.MP3" },
-  { id:"sfx_coin",      category:"sfx",     layer:"sfx",      label:"Coin Collision",   url:"Audio Database/Sound Effect/coincollision.mp3" },
-  { id:"sfx_click",     category:"sfx",     layer:"sfx",      label:"Mouse Click",      url:"Audio Database/Sound Effect/mouseclick.mp3" },
-  { id:"sfx_notif",     category:"sfx",     layer:"sfx",      label:"Notification",     url:"Audio Database/Sound Effect/notification.mp3" },
-  { id:"sfx_good",      category:"sfx",     layer:"sfx",      label:"Good Result",      url:"Audio Database/Sound Effect/goodresult.mp3" },
-  { id:"sfx_error",     category:"sfx",     layer:"sfx",      label:"Error",            url:"Audio Database/Sound Effect/error.mp3" },
-  { id:"sfx_apple",     category:"sfx",     layer:"sfx",      label:"Apple Pay",        url:"Audio Database/Sound Effect/applepaysuccess.mp3" },
-  { id:"sfx_swipe",     category:"sfx",     layer:"sfx",      label:"Quick Swipe",      url:"Audio Database/Sound Effect/quickswipe.mp3" },
-  { id:"sfx_scifi",     category:"sfx",     layer:"sfx",      label:"Sci-Fi Sensors",   url:"Audio Database/Sound Effect/scifisensors.mp3" },
-  { id:"sfx_drama",     category:"sfx",     layer:"sfx",      label:"Dramatic Riser",   url:"Audio Database/Sound Effect/dramaticriser2.mp3" },
+  { id:"sfx_dog",       category:"sfx",     layer:"sfx",      label:"Dog Barks",        url:"audio/sfx/dogbarks.mp3" },
+  { id:"sfx_church",    category:"sfx",     layer:"sfx",      label:"Church Bell",      url:"audio/sfx/churchbell.mp3" },
+  { id:"sfx_lion",      category:"sfx",     layer:"sfx",      label:"Lion Roar",        url:"audio/sfx/lionroar.mp3" },
+  { id:"sfx_crash",     category:"sfx",     layer:"sfx",      label:"Car Crash",        url:"audio/sfx/carcrash.mp3" },
+  { id:"sfx_sword",     category:"sfx",     layer:"sfx",      label:"Sword Fight",      url:"audio/sfx/swordfight.mp3" },
+  { id:"sfx_tree",      category:"sfx",     layer:"sfx",      label:"Falling Tree",     url:"audio/sfx/fallingtree.mp3" },
+  { id:"sfx_alarm",     category:"sfx",     layer:"sfx",      label:"Alarm",            url:"audio/sfx/alarm.mp3" },
+  { id:"sfx_explosion", category:"sfx",     layer:"sfx",      label:"Explosion",        url:"audio/sfx/cinematicexplosion.mp3" },
+  { id:"sfx_whoosh",    category:"sfx",     layer:"sfx",      label:"Cinematic Whoosh", url:"audio/sfx/whooshcinematic.mp3" },
+  { id:"sfx_riser",     category:"sfx",     layer:"sfx",      label:"Cinematic Riser",  url:"audio/sfx/cinematicriser.mp3" },
+  { id:"sfx_cloth",     category:"sfx",     layer:"sfx",      label:"Cloth Rustle",     url:"audio/sfx/clothrustle.MP3" },
+  { id:"sfx_coin",      category:"sfx",     layer:"sfx",      label:"Coin Collision",   url:"audio/sfx/coincollision.mp3" },
+  { id:"sfx_click",     category:"sfx",     layer:"sfx",      label:"Mouse Click",      url:"audio/sfx/mouseclick.mp3" },
+  { id:"sfx_notif",     category:"sfx",     layer:"sfx",      label:"Notification",     url:"audio/sfx/notification.mp3" },
+  { id:"sfx_good",      category:"sfx",     layer:"sfx",      label:"Good Result",      url:"audio/sfx/goodresult.mp3" },
+  { id:"sfx_error",     category:"sfx",     layer:"sfx",      label:"Error",            url:"audio/sfx/error.mp3" },
+  { id:"sfx_apple",     category:"sfx",     layer:"sfx",      label:"Apple Pay",        url:"audio/sfx/applepaysuccess.mp3" },
+  { id:"sfx_swipe",     category:"sfx",     layer:"sfx",      label:"Quick Swipe",      url:"audio/sfx/quickswipe.mp3" },
+  { id:"sfx_scifi",     category:"sfx",     layer:"sfx",      label:"Sci-Fi Sensors",   url:"audio/sfx/scifisensors.mp3" },
+  { id:"sfx_drama",     category:"sfx",     layer:"sfx",      label:"Dramatic Riser",   url:"audio/sfx/dramaticriser2.mp3" },
 ];
 
 let customSelectedSound   = null; // SOUND_LIBRARY 中当前选中的条目
@@ -1461,18 +1461,18 @@ window.handleOverlayClick = function(e) {
 //  AUDIO
 // ─────────────────────────────
 function setupAudio() {
-  windSound = new Audio("Audio Database/Ambience/Wind/wind.mp3");
-  rainSound = new Audio("Audio Database/Ambience/Rain/rain.mp3");
-  thunderSound = new Audio("Audio Database/Ambience/Thunder/thunderstorm.mp3");
-  birdSound = new Audio("Audio Database/Ambience/Birds/bird.mp3");
+  windSound = new Audio("audio/ambience/Wind/wind.mp3");
+  rainSound = new Audio("audio/ambience/Rain/rain.mp3");
+  thunderSound = new Audio("audio/ambience/Thunder/thunderstorm.mp3");
+  birdSound = new Audio("audio/ambience/Birds/bird.mp3");
   for (const s of [windSound, rainSound, thunderSound, birdSound]) {
     s.loop = true; s.volume = smoothedVolume;
   }
 
-  dogSound = new Audio("Audio Database/Sound Effect/dogbarks.mp3");
-  doorSound = new Audio("Audio Database/Sound Effect/doorknock.mp3");
-  footstepsSound = new Audio("Audio Database/Sound Effect/footsteps.mp3");
-  guzhenSound = new Audio("Audio Database/Sound Effect/guzhen.mp3");
+  dogSound = new Audio("audio/sfx/dogbarks.mp3");
+  doorSound = new Audio("audio/sfx/doorknock.mp3");
+  footstepsSound = new Audio("audio/sfx/footsteps.mp3");
+  guzhenSound = new Audio("audio/sfx/guzhen.mp3");
   for (const s of [dogSound, doorSound, footstepsSound, guzhenSound]) {
     s.loop = false; s.volume = 0.9;
   }
