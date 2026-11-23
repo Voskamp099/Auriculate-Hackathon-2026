@@ -1,7 +1,7 @@
 <a id="readme-top"></a>
 
 <div align="center">
-  <img src="logo.png" width="80"/>
+  <img src="assets/logo.png" width="80"/>
 
   <h2>Auriculate</h2>
 
@@ -109,9 +109,10 @@ Then open `http://localhost:3000` in a browser that allows camera access.
 | File | Role |
 | ---- | ---- |
 | `index.html` | The entire application — HTML, CSS and JS in one file |
-| `gesture_engine.js` | Earlier standalone Phase 8 implementation, kept for reference; not loaded |
-| `logo.png`, `logo-transparent.png`, `logo-white.png` | Brand marks |
+| `legacy/gesture_engine.js` | Earlier standalone Phase 8 implementation, kept for reference; not loaded |
+| `assets/logo.png`, `assets/logo-transparent.png`, `assets/logo-white.png` | Brand marks |
 | `Audio Database/` | Sound assets |
+| `assets/` | Brand marks |
 
 ## Motivation
 

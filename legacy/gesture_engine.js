@@ -62,19 +62,19 @@ function updateMirrorCSS() {
 
 // === Audio setup ===
 function setupAudio() {
-  windSound = new Audio("wind.mp3");
-  rainSound = new Audio("rain.mp3");
-  thunderSound = new Audio("thunderstorm.mp3");
-  birdSound = new Audio("bird.mp3");
+  windSound = new Audio("Audio Database/Ambience/Wind/wind.mp3");
+  rainSound = new Audio("Audio Database/Ambience/Rain/rain.mp3");
+  thunderSound = new Audio("Audio Database/Ambience/Thunder/thunderstorm.mp3");
+  birdSound = new Audio("Audio Database/Ambience/Birds/bird.mp3");
   for (const s of [windSound, rainSound, thunderSound, birdSound]) {
     s.loop = true;
     s.volume = ambienceVolume;
   }
 
-  dogSound = new Audio("dogbarks.mp3");
-  doorSound = new Audio("doorknock.mp3");
-  footstepsSound = new Audio("footsteps.mp3");
-  guzhenSound = new Audio("guzhen.mp3");
+  dogSound = new Audio("Audio Database/Sound Effect/dogbarks.mp3");
+  doorSound = new Audio("Audio Database/Sound Effect/doorknock.mp3");
+  footstepsSound = new Audio("Audio Database/Sound Effect/footsteps.mp3");
+  guzhenSound = new Audio("Audio Database/Sound Effect/guzhen.mp3");
   for (const s of [dogSound, doorSound, footstepsSound, guzhenSound]) {
     s.loop = false;
     s.volume = 0.9;
